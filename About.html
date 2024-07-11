@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="about.css">
+</head>
+<body>  
+    
+    <!-- <h1>
+        <tr>
+            &nbsp;&nbsp;&nbsp;&nbsp;          
+            <a href="index.html">HOME</a>&nbsp;
+            <a href="About.html">ABOUT</a>&nbsp;
+            <a href="portfolio.html">PORTFOLIO</a>&nbsp;
+            <a href="Contact.html">CONTACT</a>&nbsp;
+            <a href="location.html">LOCATION</a>&nbsp; 
+        </tr>  
+    </h1> -->
+    <div id="ta">
+        <h1 class="p">ABOUT</h1>
+        <P> I have  completed Bachelor of Engineering(B.E) Computer Science and Engineering with 8.45 CGPA. <br>Aspiring as a Engineer seeking a challanging position to apply my skills and knoiwledge Adding value to company projects through innovative solutions.
+       </P>
+    </div>
+    <div id="a">
+    <h1 class="p"><span>SKILLS</span> </h1>
+    <!-- <ul>
+    <li>Html</li>
+    <li>Css</li>
+    <li>Javascript</li>
+    <li>Sql</li>
+    <li>Java</li>
+    </ul> -->
+    <img src="htm.jpeg"alt="image" height="170px" width="150px">
+    <img src="css.jpeg"alt="image" height="170px" width="150px">
+    <img src="js.jpeg"alt="image" height="170px" width="150px">
+    <img src="sql.jpeg"alt="image" height="170px" width="150px">
+    <img src="java.jpeg"alt="image" height="170px" width="150px">
+    </div>
+</section>
+<section id="resume">
+    <h2>RESUME</h2>
+    <button id="DownloadResume">VIEW RESUME</button>
+    <div id="resumeContainer">       
+    </div>
+</section>
+<script>
+    document.getElementById('DownloadResume').addEventListener('click', function() {
+    fetch('Tamilarasi Resume.pdf (1).pdf') 
+        .then(response => response.blob())
+        .then(blob => {
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url
+            a.download = 'Tamilarasi Resume.pdf';
+            document.getElementById('resumeContainer').appendChild(a);
+            a.click();
+            window.URL.revokeObjectURL(url);
+        })
+        .catch(error => console.error(error));
+})
+</script>
+
+</body>
+</html>
