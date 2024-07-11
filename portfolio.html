@@ -71,13 +71,13 @@
             
 <script>
 document.getElementById('DownloadResume').addEventListener('click', function() {
-    fetch('Tamilarasi Resume.pdf (1).pdf') 
+    fetch('Tamilarasi Resume.pdf (1).pdf.pdf') 
         .then(response => response.blob())
         .then(blob => {
             const url = window.URL.createObjectURL(blob);
             const a = document.createElement('a');
             a.href = url
-            a.download = 'Tamilarasi Resume.pdf (1).pdf';
+            a.download = 'Tamilarasi Resume.pdf (1).pdf.pdf';
             document.getElementById('resumeContainer').appendChild(a);
             a.click();
             window.URL.revokeObjectURL(url);
