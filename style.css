@@ -4,6 +4,7 @@ body {
     background-color: #e73939;
     margin: 0;
     padding: 0;
+    scroll-behavior:smooth;
 }
 
 header {
